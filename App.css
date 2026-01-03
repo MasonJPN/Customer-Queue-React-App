@@ -1,0 +1,128 @@
+/* Queue Form Container */
+body{
+  background: black;
+}
+
+
+.queue-form {
+  background: #747473; /* light gradient background */
+  padding: 20px 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  max-width: 400px;
+  margin: 20px auto; /* center the form */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: transform 0.2s ease;
+}
+
+/* Form Heading */
+.queue-form h2 {
+  text-align: center;
+  margin-bottom: 15px;
+  color: #000000;
+}
+
+/* Form Groups */
+.queue-form .form-group {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.queue-form input,
+.queue-form select {
+  padding: 10px 12px;
+}
+
+/* Queue Display Container */
+.queue-display {
+  background: #858586; /* light background */
+  padding: 20px 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  max-width: 500px;
+  margin: 20px auto; /* center on page */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Heading */
+.queue-display h2 {
+  text-align: center;
+  margin-bottom: 15px;
+  color: #0b0b0b;
+}
+
+/* Empty Queue Text */
+.empty-queue {
+  text-align: center;
+  font-style: italic;
+  color: #0c0c0c;
+}
+
+/* Queue List */
+.queue-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Individual Queue Item */
+.queue-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f9f8f8;
+  padding: 12px 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: transform 0.1s ease, box-shadow 0.2s ease;
+}
+
+.queue-item:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Customer Info */
+.customer-info h3 {
+  margin: 0;
+  font-size: 16px;
+  color: #7d7c7c;
+}
+
+.customer-info p {
+  margin: 2px 0 0 0;
+  font-size: 14px;
+  color: #555;
+}
+
+/* Optional: Status/Remove buttons if you add them later */
+.queue-item button {
+  margin-left: 10px;
+  padding: 5px 8px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.queue-item button.update {
+  background-color: #4f8ef7;
+  color: white;
+}
+
+.queue-item button.remove {
+  background-color: #f25c5c;
+  color: white;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .queue-display {
+    padding: 15px 20px;
+  }
+  .queue-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
